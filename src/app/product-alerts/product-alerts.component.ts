@@ -10,8 +10,9 @@ import { Input } from '@angular/core'
     styleUrls: ['./product-alerts.component.css']
 })
 export class ProductAlertsComponent implements OnInit {
-    //@Input() 装饰器指出其属性值是从该组件的父组件商品列表组件中传入的(productalerts.component.ts)
+    //@Input() 装饰器指出其属性值是从该组件的父组件商品列表组件中传入的
     @Input() product;
+    //让商品提醒组件在 notify 属性发生变化时发出事件
     @Output() notify = new EventEmitter();
 
     constructor() {
